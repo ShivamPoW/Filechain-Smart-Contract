@@ -2,9 +2,11 @@
 
 ## Overview
 
-It gives one the power to save any file's existence proof on-chain, which works as proof of ownership in time. Each Merkle tree is independent, although linked with each other. Only hash values of the red box are required to prove the file's existence, as Merkle roots are saved on-chain. However, the final tree hash and the data structure is all we need to verify his entire history of files.
+It gives one the power to save any file's existence proof on-chain, which works as proof of ownership in time. Each Merkle tree is independent, although linked with each other. Only hash values of the red box are required to prove the file's existence, as Merkle roots are saved on-chain. 
 
 ![Illustration](images/new_overview.png)
+
+However, the final tree hash and the data structure is all we need to verify his entire history of files. This data structure gives the flexibility of uploading any number of files at any time and using just 32 bytes of storage.
 
 Link to the project website: https://filechain.vercel.app
 
