@@ -6,7 +6,7 @@ It gives one the power to save any file's existence proof on-chain, which works 
 
 ![Illustration](images/new_overview.png)
 
-However, the final Merkle tree root and the data structure is all we need to verify his entire history of files. This data structure gives the flexibility of uploading any number of files at any time and using just 32 bytes of storage.
+However, the final Merkle tree root and the data structure is all we need to verify the entire history of files. This data structure gives the flexibility of uploading any number of files at any time and using just 32 bytes of storage.
 
 Link to the project website: https://filechain.vercel.app
 
