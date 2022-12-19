@@ -19,8 +19,8 @@
         files: uint                ;; Security for loss (Not strictly required)
     }
 )
-;; Record of last commit 
-;; (Not strictly required)
+
+;; Record of last commit (Not strictly required)
 (define-map last-commit principal uint) 
 
 ;; Read only functions
