@@ -2,6 +2,8 @@
 
 ## Overview
 
+![Illustration](/image/overview.png)
+
 It gives the user the power to save any file's existence proof on-chain, which works as proof of time and ownership. It gives the user the power to save any file's existence proof on-chain, which works as proof of time and ownership.
 
 Link to the project website: https://filechain.vercel.app/generate
