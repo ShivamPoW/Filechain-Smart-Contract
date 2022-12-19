@@ -23,7 +23,6 @@
 ;; (Not strictly required)
 (define-map last-commit principal uint) 
 
-
 ;; Read only functions
 
 ;; returns last commit of the User 
@@ -86,7 +85,6 @@
 ) 
 
 ;; Helper functions
-;; Prevents same hash to be added consecutively
 
 ;; Checks commit validity
 (define-read-only (is-valid-commit (count uint)) 
@@ -99,6 +97,7 @@
     )
 )
 
+;; Prevents same hash to be added consecutively
 (define-read-only (unique-merkle-root (count uint) (new-root (buff 64)))
     (if (> count u1)
         (let ((old-root (get-merkle-root (- count u1))))
@@ -107,8 +106,6 @@
         true
     )
 )
-
-
 
 ;; Public functions
 (define-public (add-merkle-root (name (string-utf8 500)) (new-merkle-root (buff 64)) (files uint))
