@@ -2,7 +2,7 @@
 
 ## Overview
 
-It gives the user the power to save any file's existence proof on-chain, which works as proof of time and ownership. It gives the user the power to save any file's existence proof on-chain, which works as proof of time and ownership.
+It gives the user the power to save any file's existence proof on-chain, which works as proof of ownership in time. 
 
 ![Illustration](images/new_overview.png)
 
