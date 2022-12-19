@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@stacks/blockchain-api-client": "^6.2.3",
+    "@stacks/transactions": "^6.0.0",
+    "cross-fetch": "^3.1.5",
+    "dotenv": "^16.0.3"
+  },
+  "type": "module",
+  "scripts": {
+    "deploy": "set NODE_ENV=dev && node ./deploy/deploy.js"
+  }
+}
