@@ -1,3 +1,5 @@
+//to test the stacks contract locally
+
 import {
   Clarinet,
   Tx,
