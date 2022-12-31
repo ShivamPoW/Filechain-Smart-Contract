@@ -7,6 +7,7 @@ import {
   } from "https://deno.land/x/clarinet@v1.0.6/index.ts";
   import { assertEquals } from "https://deno.land/std@0.90.0/testing/asserts.ts";
 
+
  //testing add-merkle-root function using other utility functions 
   Clarinet.test({
     name: "Ensure that commits are added as intended",
@@ -66,6 +67,7 @@ import {
         block.receipts[3].result.expectUint(1);
     },
   });
+
 
   //testing multiple commit handling and all other utility functions testing
   Clarinet.test({

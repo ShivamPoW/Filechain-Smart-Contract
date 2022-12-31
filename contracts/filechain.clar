@@ -98,29 +98,32 @@
 )
 
 ;; Prevents same hash to be added consecutively
-(define-read-only (unique-merkle-root (count uint) (new-root (buff 64)))
-    (if (> count u1)
-        (let ((old-root (get-merkle-root (- count u1))))
-            (not (is-eq old-root new-root))
-        )
-        true
-    )
-)
+(define-read-only (unique-merkle-root (count uint) (new-root (buff 64))) 
+    (if (> count u1) 
+        (let ((old-root (get-merkle-root (- count u1)))) 
+            (not (is-eq old-root new-root)) 
+        ) 
+        true 
+    ) 
+) 
 
 ;; Public functions
-(define-public (add-merkle-root (name (string-utf8 500)) (new-merkle-root (buff 64)) (files uint))
-    (let ((old-count (get-last-commit))
-          (new-count (+ old-count u1))
-          (old-files (get-total-files old-count))  
-          (new-files (+ old-files files)))
-            (map-set last-commit tx-sender new-count)
-            (asserts! (unique-merkle-root new-count new-merkle-root) (err u2))
-            (asserts! 
-                (map-insert commits 
-                {id: tx-sender, count: new-count} 
-                {name: name, merkle_root: new-merkle-root, files: new-files}) 
-            (err u1)           
-            )
-            (ok "commit-added")
-    )
-)
+(define-public (add-merkle-root (name (string-utf8 500)) (new-merkle-root (buff 64)) (files uint)) 
+    (let ((old-count (get-last-commit)) 
+          (new-count (+ old-count u1)) 
+        
+          (old-files (get-total-files old-count)) 
+          (new-files (+ old-files files))) 
+            (map-set last-commit tx-sender new-count) 
+            (asserts! (unique-merkle-root new-count new-merkle-root) (err u2)) 
+        
+            (asserts!
+    
+                (map-insert commits
+                {id: tx-sender, count: new-count}
+                {name: name, merkle_root: new-merkle-root, files: new-files})
+            (err u1)
+            ) 
+            (ok "commit-added") 
+    ) 
+) 
